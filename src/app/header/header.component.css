@@ -1,0 +1,27 @@
+#logout{
+  background-color: #007BFF;
+  color: white;
+  border: 0px;
+}
+#logout:hover{
+  background-color: dodgerblue;
+}
+
+#tasklist:hover{
+  background-color: dodgerblue;
+}
+
+.nav-item{
+  padding-left: 20px;
+
+}
+
+#login:hover{
+  background-color: dodgerblue;
+}
+#signup:hover{
+  background-color: dodgerblue;
+}
+
+
+

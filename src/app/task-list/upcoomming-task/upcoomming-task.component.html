@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-center" *ngIf="isLoading">
+  <div class="spinner-border text-primary" role="status">
+    <span class="sr-only ">Loading...</span>
+  </div>
+</div>
+
+<ul class="list-group" *ngIf="!isLoading">
+  <li *ngFor="let events of upcomminglist; let i =index" class="list-group-item list-group-item-light d-flex justify-content-between align-items-center" style="border: 1px solid #007BFF">
+
+    {{events.task}}  -  {{events.date}}
+
+    <span class="badge badge-pill" *ngIf="userIsAuthenticated && userId === events.creator ">
+      <a  class="badge badge-primary" (click)="onsuccessbtn(i, events.id)">Sucess</a> |
+      <a  [routerLink]="['/edit',events.id]" class="badge badge-secondary">Edit</a> |
+     <a (click)="ondeletebtn(events.id)" class="badge badge-danger">Delete</a></span>
+  </li>
+
+</ul>
